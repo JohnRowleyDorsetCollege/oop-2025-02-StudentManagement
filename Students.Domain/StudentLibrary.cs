@@ -10,9 +10,17 @@ namespace Students.Domain
         public int Age { get; set; }
     }
 
+    public class Movie
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public int Year { get; set; }
+    }
+
     public class AppDbContext : DbContext
     {
         public DbSet<Student> Students { get; set; }
+        public DbSet<Movie> Movies { get; set; }
         public AppDbContext()
         {
 
